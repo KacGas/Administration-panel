@@ -23,32 +23,22 @@ A web application for managing movies with role-based access control. The system
 * Movies (or products, adaptable to various content).
 
 ## Technologies Used
-* Backend (IntelliJ, Java Spring Boot)
-Java: Version 17
-Spring Boot: Version 3.4
-Gradle: Build automation tool
-MySQL: Database
+Backend (IntelliJ, Java Spring Boot)
+*Java: Version 17
+*Spring Boot: Version 3.4
+*Gradle: Build automation tool
+*MySQL: Database
 
-* Frontend (WebStorm, Angular)
-Angular: Version 19
+Frontend (WebStorm, Angular)
+*Angular: Version 19
 
 ## Setup
 ### 1. Clone the repository
 ```
-git clone git@github.com:KacGas/Single-Page-Application.git
+git clone git@github.com:KacGas/Administration-panel.git
 cd spa-project
 ```
-### 2. Install Dependencies
-Ensure you have Maven and JDK 17 installed. Then, install the dependencies:
-```
-mvn clean install
-```
-### 3. Run the Application
-Start the Spring Boot application:
-```
-mvn spring-boot:run
-```
-### 3. Run the Application
+### 2. Run the Application
 Use Postman to register an admin via (this endpoint can be deleted after the first admin is created):
 ```
 POST http://localhost:8080/api/auth/register
