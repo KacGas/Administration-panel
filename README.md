@@ -24,13 +24,13 @@ A web application for managing movies with role-based access control. The system
 
 ## Technologies Used
 Backend (IntelliJ, Java Spring Boot):
-*Java: Version 17
-*Spring Boot: Version 3.4
-*Gradle: Build automation tool
-*MySQL: Database
+* Java: Version 17
+* Spring Boot: Version 3.4
+* Gradle: Build automation tool
+* MySQL: Database
 
 Frontend (WebStorm, Angular):
-*Angular: Version 19
+* Angular: Version 19
 
 ## Setup
 ### 1. Clone the repository
