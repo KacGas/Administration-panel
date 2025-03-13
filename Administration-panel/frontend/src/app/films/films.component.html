@@ -1,0 +1,59 @@
+<div class="films-container">
+  <div class="add-film" *ngIf="isAdmin">
+    <h2>Add New Film</h2>
+    <form (ngSubmit)="addFilm()" class="add-film-form">
+      <input type="text" placeholder="Title" [(ngModel)]="newFilm.title" name="title" required />
+      <input type="text" placeholder="Genre" [(ngModel)]="newFilm.genre" name="genre" required />
+      <input type="text" placeholder="Premiere" [(ngModel)]="newFilm.premiere" name="premiere" required />
+      <input type="text" placeholder="Director" [(ngModel)]="newFilm.director" name="director" required />
+      <input type="text" placeholder="Duration" [(ngModel)]="newFilm.duration" name="duration" required />
+      <input type="text" placeholder="Rate" [(ngModel)]="newFilm.rate" name="rate" required />
+      <button type="submit">Add Film</button>
+    </form>
+  </div>
+
+  <div class="films-list">
+    <h2>Films</h2>
+    <table class="films-table">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Premiere</th>
+        <th>Director</th>
+        <th>Duration</th>
+        <th>Rate</th>
+        <th *ngIf="isAdmin">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let film of films">
+        <td *ngIf="!editMode.enabled || editMode.film.id !== film.id">{{ film.title }}</td>
+        <td *ngIf="!editMode.enabled || editMode.film.id !== film.id">{{ film.genre }}</td>
+        <td *ngIf="!editMode.enabled || editMode.film.id !== film.id">{{ film.premiere }}</td>
+        <td *ngIf="!editMode.enabled || editMode.film.id !== film.id">{{ film.director }}</td>
+        <td *ngIf="!editMode.enabled || editMode.film.id !== film.id">{{ film.duration }}</td>
+        <td *ngIf="!editMode.enabled || editMode.film.id !== film.id">{{ film.rate }}</td>
+
+        <td *ngIf="isAdmin && (!editMode.enabled || editMode.film.id !== film.id)">
+          <button (click)="enableEdit(film)">Edit</button>
+          <button (click)="deleteFilm(film.id)">Delete</button>
+        </td>
+
+        <td *ngIf="editMode.enabled && editMode.film.id === film.id" colspan="7">
+          <form (ngSubmit)="saveEdit()" class="edit-film-form">
+            <input type="text" [(ngModel)]="editMode.film.title" name="title" required />
+            <input type="text" [(ngModel)]="editMode.film.genre" name="genre" required />
+            <input type="text" [(ngModel)]="editMode.film.premiere" name="premiere" required />
+            <input type="text" [(ngModel)]="editMode.film.director" name="director" required />
+            <input type="text" [(ngModel)]="editMode.film.duration" name="duration" required />
+            <input type="text" [(ngModel)]="editMode.film.rate" name="rate" required />
+            <button type="submit">Save</button>
+            <button type="button" (click)="cancelEdit()">Cancel</button>
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

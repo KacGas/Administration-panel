@@ -1,0 +1,17 @@
+Backend: Java Spring z użyciem gradle w IntelliJ
+Java - wersja 17
+Spring - wersja 3.4
+Baza danych - mysql
+
+W projekcie zrobiłem lokalną baze danych, wiec stworzylem specjalny dodatkowy endpoint dla dodania admina - http://localhost:8080/api/auth/register - 
+można dodać za pomocą np. postmana
+
+
+Front: Angular w WebStormie - wersja 19
+
+Endpoint logowania - http://localhost:4200/auth/login 
+Endpoint rejestracji użytkownika/admina - tylko admin - http://localhost:4200/add-user
+Endpoint po zalogowaniu/filmów - dla użytkownika wyświetlane są tylko filmy, 
+zalogowany admin dostaje równiez dostęp do ich dodawania, usuwania oraz edycji - http://localhost:4200/films
+
+

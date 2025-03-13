@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="/" class="navbar-logo">Movie App</a>
+  </div>
+
+  <div class="navbar-right">
+    <button *ngIf="!isAuthenticated" (click)="router.navigate(['/login'])">Login</button>
+    <button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
+
+    <button *ngIf="isAuthenticated && isAdmin" (click)="router.navigate(['/films'])">Add Movie</button>
+    <button *ngIf="isAuthenticated && isAdmin" (click)="router.navigate(['/add-user'])">Add User</button>
+  </div>
+</nav>
