@@ -1,6 +1,6 @@
 # Administration-panel
 
-This project is a Single Page Application (SPA) built using Java and Spring Boot. The primary objective is to demonstrate a modern web application using Java 17.0.9 and Spring Boot 3.2.5, leveraging the powerful development tools provided by JetBrains.
+A web application for managing movies with role-based access control. The system allows users to view movies, while administrators can add, edit, and delete movies as well as manage users. Authentication is handled using JWT and session cookies for secure access.
 
 ## Table of Contents
 * [Features](#features)
