@@ -38,7 +38,11 @@ Frontend (WebStorm, Angular):
 git clone git@github.com:KacGas/Administration-panel.git
 cd spa-project
 ```
-### 2. Run the Application
+### 2. Install Dependencies (frontend)
+```
+npm install
+```
+### 3. Create administrator
 Use Postman to register an admin via (this endpoint can be deleted after the first admin is created):
 ```
 POST http://localhost:8080/api/auth/register
